@@ -376,7 +376,7 @@ instance per Emacs instance."
   (httpd-start)
   (message "Started simple-httpd on %s:%d, serving: %s"
            (cl-case httpd-host
-             ((nil) "0.0.0.0")
+             ((nil) "127.0.0.1")
              ((local) "localhost")
              (otherwise httpd-host)) httpd-port directory))
 
